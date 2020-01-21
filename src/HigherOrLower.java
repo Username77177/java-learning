@@ -33,7 +33,7 @@ public class HigherOrLower {
             }
             System.out.println("Попробовать ещё раз? (y - да; любое другое значение - нет)");
             yon = scan.next();
-        }while(yon.equalsIgnoreCase("y")); // If yon == y or yon == Y, value will be true
+        } while(yon.equalsIgnoreCase("y")); // If yon == y or yon == Y, value will be true
         // In another case: false
     }
 

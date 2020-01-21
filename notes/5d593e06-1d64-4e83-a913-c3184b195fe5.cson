@@ -1,5 +1,5 @@
 createdAt: "2020-01-21T12:36:55.446Z"
-updatedAt: "2020-01-21T19:17:49.264Z"
+updatedAt: "2020-01-21T20:14:01.000Z"
 type: "MARKDOWN_NOTE"
 folder: "a1fa9728381e349d90c1"
 title: "Первая игра: 'Больше или меньше'"
@@ -12,47 +12,44 @@ content: '''
   
   ```java
   import java.util.Scanner;
-  // Importing Scanner class for reading input from keyboard
+  
   public class HigherOrLower {
-      public static void main(String[] args) { 
-          Scanner scan = new Scanner(System.in); //Define new constructor scan
+      public static void main(String[] args) {
+          Scanner scan = new Scanner(System.in); // Определили новый конструктор
+          String yon = "";
+          do {
+              System.out.println("Привет! Это игра угадай число. У вас 3 попытки"); // Вывели эту строку
+              int rand_num = (int) (Math.random() * 10 + 1); // Генерируем число от 1 до 10
+  //        System.out.println(rand_num); Вывели число rand_num
   
-          System.out.println("Привет! Это игра угадай число. У вас 3 попытки");
-          int rand_num = (int) (Math.random() * 10 + 1); // Generating new random num in range [1;10]
-  //        System.out.println(rand_num); //Output rand_num
-  
-          int guess = 0;
-          int try_again = 0;
-          while (try_again < 3)
-          {
-              System.out.print("Введите целое число: ");
-              guess = scan.nextInt();         // Guess of user default
-              System.out.print("Вы ввели: "+guess+"\\n");
-              if (guess < rand_num) // First condition
-              {
-                  System.out.println("Загаданное число больше");
+              int guess = 0;
+              int try_again = 0;
+              while (try_again < 3) {
+                  System.out.print("Введите целое число: ");
+                  guess = scan.nextInt(); // Ввод числа
+                  System.out.print("Вы ввели: " + guess + "\\n");
+                  if (guess < rand_num) { // Первое условие
+                      System.out.println("Загаданное число больше");
+                  } else if (guess > rand_num) { // Второе условие
+                      System.out.println("Загаданное число меньше");
+                  } else { // Третье условие
+                      System.out.println("Вы угадали!");
+                      break;
+                  }
+                  try_again++; // Инкрементируем try_again (try_again += 1)
               }
-              else if (guess > rand_num) // Second condition
-              {
-                  System.out.println("Загаданное число меньше");
+              if (try_again == 3) { // Если вы отгадывали число больше, чем 3 раза - вы проиграли
+                  System.out.println("Мне жаль, но вы проиграли!");
+                  System.out.println("Загаданное число - " + rand_num); // Выводим rand_num
+              } else { // В остальном: вы вводили число меньше, чем 3 раза - вы выиграли
+                  System.out.println("Ура, вы выиграли!");
               }
-              else
-              {
-                  System.out.println("Вы угадали!");
-                  break;
-              }
-              try_again++;
-          }
-          if (try_again == 3)
-          {
-              System.out.println("Мне жаль, но вы проиграли!");
-              System.out.println("Загаданное число - "+ rand_num);
-          }
-          else {
-              System.out.println("Ура, вы выиграли!");
-  
-          }
+              System.out.println("Попробовать ещё раз? (y - да; любое другое значение - нет)");
+              yon = scan.next();
+          } while(yon.equalsIgnoreCase("y")); // Если yon == "y" или yon == "Y" то выражение есть истина
+          // В другом случае выражение это ложь
       }
+  
   }
   
   ```
