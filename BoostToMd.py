@@ -31,7 +31,7 @@ for thisfile in files_cson:
     print("Title: "+title.strip('"'))
     print("Content:")
     print(content)
-
+    title = title.strip("\\")
     newfile = open("notes_md/"+title.strip('"')+".md", "w")
     newfile.write(content)
     newfile.close()
