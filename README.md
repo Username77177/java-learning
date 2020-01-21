@@ -3,10 +3,10 @@
 
 ## Стартовый набор:
 
-* Intellij IDEA (*Хорошая IDE*)
-* VSCode (*Расширяемый редактор*)
-* NeoVim (*Самый быстрый редактор*)
-* BoostNote (*Приложение для заметок с разметкой Markdown*)
+* [Intellij IDEA](https://github.com/JetBrains/intellij-community) (*Хорошая IDE для Java*)
+* [VSCode](https://github.com/microsoft/vscode) (*Расширяемый редактор*)
+* [NeoVim](https://github.com/neovim/neovim) (*Самый быстрый редактор*)
+* [BoostNote](https://github.com/BoostIO/Boostnote) (*Приложение для заметок с разметкой Markdown*)
 
 ### Плагины
 
