@@ -1,0 +1,22 @@
+createdAt: "2020-01-21T11:50:20.001Z"
+updatedAt: "2020-01-21T12:11:17.854Z"
+type: "MARKDOWN_NOTE"
+folder: "a1fa9728381e349d90c1"
+title: "Установка нужного ПО"
+tags: [
+  "IDE"
+  "java"
+  "programming"
+]
+content: '''
+  # Установка нужного ПО
+  
+  ## Выбор IDE
+  
+  В книге выбор автора падает на *Eclipse*, однако мне *Eclipse* не нравится. Мой субъективный выбор пал на *Intellij IDEA*.
+  
+  
+'''
+linesHighlighted: []
+isStarred: false
+isTrashed: false
