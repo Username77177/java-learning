@@ -1,5 +1,5 @@
 createdAt: "2020-01-21T12:36:55.446Z"
-updatedAt: "2020-01-21T12:40:03.867Z"
+updatedAt: "2020-01-21T19:17:49.264Z"
 type: "MARKDOWN_NOTE"
 folder: "a1fa9728381e349d90c1"
 title: "Первая игра: 'Больше или меньше'"
@@ -12,7 +12,7 @@ content: '''
   
   ```java
   import java.util.Scanner;
-  
+  // Importing Scanner class for reading input from keyboard
   public class HigherOrLower {
       public static void main(String[] args) { 
           Scanner scan = new Scanner(System.in); //Define new constructor scan
@@ -28,11 +28,11 @@ content: '''
               System.out.print("Введите целое число: ");
               guess = scan.nextInt();         // Guess of user default
               System.out.print("Вы ввели: "+guess+"\\n");
-              if (guess < rand_num)
+              if (guess < rand_num) // First condition
               {
                   System.out.println("Загаданное число больше");
               }
-              else if (guess > rand_num)
+              else if (guess > rand_num) // Second condition
               {
                   System.out.println("Загаданное число меньше");
               }
